@@ -1,0 +1,21 @@
+//Write a program to accept any six digit number and print the sum of all even digits of that number and multiplication of all odd digits.
+#include <stdio.h>
+int main()
+{
+    long num,nes;
+    long sum=0,pro=1;
+    printf("enter no.");
+    scanf("%ld",&num);
+    while(num>0)
+    {
+        nes=num%10;
+        if(nes%2==0)
+            sum+=nes;
+        else
+            pro*=nes;
+        num/=10;
+    }
+    printf("sum is %ld\n",sum);
+    printf("product is %ld",pro);
+    return 0;
+}
