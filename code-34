@@ -1,0 +1,35 @@
+//WAP to input a string and copy all the vowels , consonants , digits and special characters in 4 different strings then display those 4 strings. 
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+int main()
+{
+    char a[100],vow[100],dig[100],spe[100],con[100],j=0,k=0,l=0,m=0;
+    int i;
+    scanf("%[^\n]",a);
+    for(i=0;a[i];i++)
+    {
+        if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')
+            {vow[j]=a[i];
+            j++;}
+        else if(a[i]>=48&&a[i]<=57)
+            {dig[k]=a[i];
+            k++;}
+        else if(a[i]>64 && a[i]<89 ||a[i]>96 && a[i]<121 )
+            {con[l]=a[i];
+            l++;}
+        else
+            {spe[m]=a[i];
+            m++;}
+        spe[m]=0;
+        vow[j]=0;
+        dig[k]=0;
+        con[l]=0;
+    }
+    printf("%s\n",vow);
+    printf("%s\n",dig);
+    printf("%s\n",spe);
+    printf("%s\n",con);
+    return 0;
+}
