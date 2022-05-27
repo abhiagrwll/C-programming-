@@ -1,0 +1,28 @@
+C Program to find Sum and Average of two numbers
+#include<stdio.h>
+ 
+int findCube(int num){
+  
+// cube calculated and returned
+ 
+   return num * num * num;
+  
+}
+ 
+int main() {
+ 
+  
+   int num,cube;
+     
+   printf("Enter any number: ");
+   scanf("%d",&num);
+ 
+ /* Cube function is called
+to get cube of number */
+  
+   cube = findCube(num);
+  
+   printf("Cube of the given number is %d",cube);
+  
+   return 0;
+}
