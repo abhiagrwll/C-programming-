@@ -1,0 +1,22 @@
+//Write a program to print all the pythagorean triplets less than 50. Any three numbers x, y, z are called pythagorean triplets if x < .Y < z and X2+y2 = Z2.
+#include <stdio.h>
+int main()
+{
+    int initial,final,a,b,c;
+    printf("enter inital range of triplets:");
+    scanf("%d",&initial);
+    printf("enter final range of triplets:");
+    scanf("%d",&final);
+    for (a=initial;a<=final;a++)
+    {
+        for(b=a;b<=final;b++)
+        {
+            for (c=b;c<=final;c++)
+            {
+                if(c*c==a*a+b*b)
+                    printf("%d  %d  %d",a,b,c);
+            }
+        }
+    }
+    return 0;
+}
